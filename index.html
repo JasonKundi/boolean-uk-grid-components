@@ -31,29 +31,119 @@
 
       /* Write CSS Here */
 
+      .logo {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        border: 2px dotted lightgreen;
+      }
+
       .three-column-grid {
+        display: grid;
+        gap:5px;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .grid-expansion-2 {
+        display: grid;
+        gap:5px;
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
       .three-column-grid__expand-two {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 8fr 1fr
       }
 
       .five-column-grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
       }
 
       .center-grid {
+        display:grid;
+        place-items: center;
+
       }
 
       .centered {
+        width: 200px;
+
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
-      .two-column-grid {
+      .two-column-grid_expand-two {
+        display: grid;
+        gap:5px;
+        grid-template-columns: 100px 1fr;
       }
+
+      .two-column-grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .box2 {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        gap: 5px;
+        border: 2px dotted lightcoral;
+        display:grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .box3 {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        gap: 5px;
+        border: 2px dotted lightcoral;
+        display:grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .box4 {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        gap: 5px;
+        border: 2px dotted lightcoral;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .box5 {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        gap: 5px;
+        border: 2px dotted lightcoral;
+      }
+
+      .box5.inner-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+
+
+      
+
+  
     </style>
   </head>
-  <body>
+  <body><div>
+    <h2>Two Column Grid (Icon Pattern)</h2>
+    <div class="container two-column-grid_expand-two">
+      <div class="logo"></div>
+      <div class="box expand"></div>
+    </div>
+  </div>
     <div>
       <h2>Three Column Grid</h2>
       <div class="container three-column-grid">
@@ -89,12 +179,12 @@
     <div>
       <h2>Grid within Grid #1</h2>
       <div class="container two-column-grid">
-        <div class="box">
+        <div class="box2">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
         </div>
-        <div class="box">
+        <div class="box3">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
@@ -105,14 +195,14 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
-        <div class="box">
+      <div class="container grid-expansion-2">
+        <div class="box4">
           <div class="inner-box"></div>
         </div>
         <div class="box expand">
           <div class="inner-box width-sm"></div>
         </div>
-        <div class="box">
+        <div class="box5">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
